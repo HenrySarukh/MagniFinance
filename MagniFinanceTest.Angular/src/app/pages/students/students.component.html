@@ -1,0 +1,27 @@
+<div class="d-flex flex-column">
+    <table class="w-100">
+        <tr class="w-100"
+            style="border-width: 8px; border-color: rgb(147, 132, 255); background-color: rgb(147, 132, 255);">
+            <th class="service-headers header-text p-3">Student</th>
+            <th class="service-headers header-text p-3">Registration Number</th>
+            <th class="service-headers header-text p-3" *ngFor="let subject of getAllSubjects()">
+                {{ subject }}
+            </th>
+        </tr>
+        <tr *ngFor="let row of data; let i = index" class="table-row" [class.table-row-odd]="i % 2 == 1">
+            <td class="table-data p-3">{{ row.studentFirstName + row.studentLastName }}</td>
+            <td class="table-data p-3">{{ row.registrationNumber }}</td>
+            <td class="table-data p-3" *ngFor="let subject of getAllSubjects()">
+              {{ getStudentGrade(subject, row) }}
+            </td>
+          </tr>
+    </table>
+    <div class="d-flex flex-row justify-content-between m-5">
+        <div class="p-3" style="background-color: rgb(147, 132, 255); cursor: pointer; border-radius: 30px;">
+            <a href="/courses" routerLinkActive="active">Courses Page</a>
+        </div>
+        <div class="p-3" style="background-color: rgb(147, 132, 255); cursor: pointer; border-radius: 30px;">
+            <a href="/subjects" routerLinkActive="active">Subjects Page</a>
+        </div>
+    </div>
+</div>

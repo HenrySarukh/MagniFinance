@@ -1,0 +1,27 @@
+<div class="d-flex flex-column">
+    <table class="w-100">
+        <tr class="w-100"
+            style="border-width: 8px; border-color: rgb(147, 132, 255); background-color: rgb(147, 132, 255);">
+            <th class="service-headers header-text p-3">Subject</th>
+            <th class="service-headers header-text p-3">Teacher's First Name</th>
+            <th class="service-headers header-text p-3">Teacher's Last Name</th>
+            <th class="service-headers header-text p-3">Students Count</th>
+            <th class="service-headers header-text p-3">Average Grade</th>
+        </tr>
+        <tr *ngFor="let row of data; let i = index" class="table-row" [class.table-row-odd]="i % 2 == 1">
+            <td class="table-data p-3">{{row.subjectName}}</td>
+            <td class="table-data p-3">{{row.teacherFirstName}}</td>
+            <td class="table-data p-3">{{row.teacherLastName}}</td>
+            <td class="table-data p-3">{{row.studentsCount}}</td>
+            <td class="table-data p-3">{{row.averageGrade}}</td>
+        </tr>
+    </table>
+    <div class="d-flex flex-row justify-content-between m-5">
+        <div class="p-3" style="background-color: rgb(147, 132, 255); cursor: pointer; border-radius: 30px;">
+            <a href="/subjects" routerLinkActive="active">Students Page</a>
+        </div>
+        <div class="p-3" style="background-color: rgb(147, 132, 255); cursor: pointer; border-radius: 30px;">
+            <a href="/courses" routerLinkActive="active">Courses Page</a>
+        </div>
+    </div>
+</div>

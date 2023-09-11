@@ -1,0 +1,39 @@
+table,
+th,
+td {
+    color: #FFF;
+    text-align: start;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-color: #FFF;
+}
+
+.service-headers {
+    font-size: 18px;
+}
+
+.table-row {
+    background: rgba(158, 179, 190, 0.14);
+}
+
+.table-row-odd {
+    background: rgba(158, 179, 190, 0.05);
+}
+
+.table-data {
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 8px 2px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    color: #FFF;
+}
